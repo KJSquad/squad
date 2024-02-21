@@ -16,4 +16,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: sleuth.yml@main
+    - uses: KJSquad/squad/.workflows/sleuth.yml@main
