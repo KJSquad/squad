@@ -13,5 +13,15 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+# Pause first, to give the chance to fill up the queue
+  sleep:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Power nap
+      run: sleep 5m
+      shell: bash
+
+  # Then deploy    
   deploy:
     uses: KJSquad/squad/.github/workflows/sleuth.yml@main
