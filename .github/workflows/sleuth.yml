@@ -24,7 +24,9 @@ jobs:
   # This workflow contains a single job called "build"
   deploy:
     # Check if PR was merged, not just closed
-    if: github.event.pull_request.merged == true
+    if: |
+      github.event.pull_request.merged == true  ||
+      github.event.label.name != 'do not merge'
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
