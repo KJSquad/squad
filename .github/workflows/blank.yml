@@ -15,12 +15,12 @@ on:
 jobs:
 
 # Pause first, to give the chance to fill up the queue
-  sleep:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Power nap
-      run: sleep 5m
-      shell: bash
+  #sleep:
+   # runs-on: ubuntu-latest
+    #steps:
+    #- name: Power nap
+     # run: sleep 5m
+      #shell: bash
 
   # Then deploy    
   deploy:
